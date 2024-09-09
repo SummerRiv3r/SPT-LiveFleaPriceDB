@@ -33,4 +33,3 @@ jobs:
         default_author: github_actions          
         add: 'prices.json'          
         message: 'Update prices'
-        verbose: true
