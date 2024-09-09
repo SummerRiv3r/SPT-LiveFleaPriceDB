@@ -125,7 +125,7 @@ const processTarkovDevPrices = ((tarkovDevPrices) => {
             continue;
         }
 
-        if (item.avg24hPrice.length == null)
+        if (item.avg24hPrice == null)
         {
             if (DEBUG) console.error(`unable to add item ${item.id} ${item.name} with no historical prices, ignoring`);
             continue;
