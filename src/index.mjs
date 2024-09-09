@@ -163,28 +163,7 @@ const processTarkovDevPrices = ((tarkovDevPrices) => {
 });
 
 const getAveragedPrice = ((item) => {
-    const fourteenDaysAgoTimestamp = new Date(Date.now() - 12096e5);
-    let filteredPrices = item.historicalPrices.filter(x => x.timestamp > fourteenDaysAgoTimestamp).sort((a, b) => a.price - b.price);
-    
-    if (filteredPrices.length === 0)
-    {
-        filteredPrices = item.historicalPrices;
-    }
-
-    if (filteredPrices.length === 1)
-    {
-        return 0;
-    }
-
-    const prices = filteredPrices.map(x => x.price);
-    const avgMean = getAverage(prices);
-    const standardDev = getStandardDeviation(prices);
-    const upperCutoff = standardDev * 1.5;
-    const lowerCutoff = standardDev * 2;
-    const lowerBound = avgMean - lowerCutoff;
-    const upperBound = avgMean + upperCutoff;
-    const pricesWithOutliersRemoved = prices.filter(x => x >= lowerBound && x <= upperBound);
-    const avgPriceWithoutOutliers = Math.round(getAverage(pricesWithOutliersRemoved));
+    const avgPriceWithoutOutliers = item.avg24hPrice
     return avgPriceWithoutOutliers;
 });
 
