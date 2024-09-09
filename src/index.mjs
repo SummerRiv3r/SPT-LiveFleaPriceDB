@@ -125,11 +125,6 @@ const processTarkovDevPrices = ((tarkovDevPrices) => {
             continue;
         }
 
-        if (item.historicalPrices.length === 0)
-        {
-            if (DEBUG) console.error(`unable to add item ${item.id} ${item.name} with no historical prices, ignoring`);
-            continue;
-        }
 
         if (item.changeLast48hPercent > 100)
         {
