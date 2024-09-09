@@ -133,7 +133,7 @@ const processTarkovDevPrices = ((tarkovDevPrices) => {
 
         if (item.changeLast48hPercent > 100)
         {
-            console.warn(`Item ${item.id} ${item.name} Has had recent ${item.changeLast48hPercent}% increase in price. ${item.historicalPrices.length} price values`);
+            console.warn(`Item ${item.id} ${item.name} Has had recent ${item.changeLast48hPercent}% increase in price values`);
         }
 
         const averagedItemPrice = getAveragedPrice(item);
