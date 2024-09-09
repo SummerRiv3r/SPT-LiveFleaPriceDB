@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DrakiaXYZ/SPT-LiveFleaPriceDB.git"
+    "url": "git+https://github.com/SummerRiv3r/SPT-LiveFleaPriceDB.git"
   },
   "author": "DrakiaXYZ",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DrakiaXYZ/SPT-LiveFleaPriceDB/issues"
+    "url": "https://github.com/SummerRiv3r/SPT-LiveFleaPriceDB/issues"
   },
-  "homepage": "https://github.com/DrakiaXYZ/SPT-LiveFleaPriceDB#readme",
+  "homepage": "https://github.com/SummerRiv3r/SPT-LiveFleaPriceDB#readme",
   "dependencies": {
     "graphql-request": "^6.1.0"
   }
